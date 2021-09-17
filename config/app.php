@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => (bool) env('APP_DEBUG', false),
+    'debug' => (bool)env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -231,4 +231,9 @@ return [
 
     ],
 
+    'db_fields' => [
+        'first_name',
+        'last_name',
+        'email'
+    ]
 ];

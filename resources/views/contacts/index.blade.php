@@ -15,7 +15,10 @@
                             <thead>
                             <tr>
                                 <th class="px-6 py-3 bg-gray-50">
-                                    <span class="text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Name</span>
+                                    <span class="text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">First name</span>
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50">
+                                    <span class="text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Last name</span>
                                 </th>
                                 <th class="px-6 py-3 bg-gray-50">
                                     <span class="text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Email</span>
@@ -24,13 +27,16 @@
                             </thead>
 
                             <tbody class="bg-white divide-y divide-gray-200 divide-solid">
-                            @foreach($users as $user)
+                            @foreach($contacs as $contact)
                                 <tr class="bg-white">
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        {{ $user->name }}
+                                        {{ $contact->first_name }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        {{ $user->email }}
+                                        {{ $contact->last_name }}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        {{ $contact->email }}
                                     </td>
                                 </tr>
                             @endforeach
