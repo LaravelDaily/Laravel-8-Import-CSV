@@ -22,7 +22,7 @@ class ImportController extends Controller
         }
 
         if (count($data) > 0) {
-            $csv_data = $request->has('header') ? array_slice($data, 1, 2) : array_slice($data, 0, 2);
+            $csv_data = array_slice($data, 0, 2);
 
             $csv_data_file = CsvData::create([
                 'csv_filename' => $request->file('csv_file')->getClientOriginalName(),
