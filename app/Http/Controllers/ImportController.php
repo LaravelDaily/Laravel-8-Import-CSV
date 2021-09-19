@@ -58,6 +58,6 @@ class ImportController extends Controller
             $contact->save();
         }
 
-        return redirect()->route('home')->with('success', 'Import finished.');
+        return redirect()->route('contacts.index')->with('success', 'Import finished.');
     }
 }
