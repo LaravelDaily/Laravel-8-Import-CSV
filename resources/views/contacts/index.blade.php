@@ -27,7 +27,7 @@
                             </thead>
 
                             <tbody class="bg-white divide-y divide-gray-200 divide-solid">
-                            @foreach($contacs as $contact)
+                            @foreach($contacts as $contact)
                                 <tr class="bg-white">
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                                         {{ $contact->first_name }}
@@ -44,7 +44,7 @@
                         </table>
                     </div>
 
-                    {{ $users->links() }}
+                    {{ $contacts->links() }}
 
                 </div>
             </div>
