@@ -42,13 +42,11 @@ class ImportController extends Controller
 
     public function processImport(Request $request)
     {
-//        dd($request->fields);
         $data = CsvData::find($request->csv_data_file_id);
         $csv_data = json_decode($data->csv_data, true);
         foreach ($csv_data as $row) {
             $contact = new Contact();
             foreach (config('app.db_fields') as $index => $field) {
-//            dd($row[$request->fields]);
                 if ($data->csv_header) {
                     $contact->$field = $row[$request->fields[$field]];
                 } else {
